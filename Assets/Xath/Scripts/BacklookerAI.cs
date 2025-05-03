@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class BacklookerAI : MonoBehaviour
 {
+    public GameObject JumpScare;
     public Transform player;                // Reference to the player's transform
     public float moveSpeed = 3.5f;          // How fast the enemy moves
     public float jumpScareDistance = 2.0f;  // Distance at which the enemy triggers a jumpscare
@@ -39,7 +40,7 @@ public class BacklookerAI : MonoBehaviour
     [Tooltip("How fast footstep sfx will be played while running?")]
     [SerializeField] private float m_footstepsRunRate = 0.3f;
 
-    [SerializeField] private GameObject JUMPSCARE;
+    
 
     // Private class members.
     private AudioSource m_footstepSource = null;
@@ -294,7 +295,7 @@ public class BacklookerAI : MonoBehaviour
         // Debug jumpscare - replace with your actual jumpscare implementation
         Debug.Log("JUMPSCARE TRIGGERED!");
 
-        JUMPSCARE.SetActive(true);
+        JumpScare.SetActive(true);
 
         // You can add additional jumpscare elements here
         // For example:

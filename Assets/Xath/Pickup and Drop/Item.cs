@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public GameObject JumpScare;
     [Header("Item Properties")]
     public string itemName = "Item";
     public int itemID = 0;
@@ -27,6 +28,7 @@ public class Item : MonoBehaviour
         if(itemID == 4)
         {
             Debug.Log("JUMPSCARE TRIGGERED!");
+            JumpScare.SetActive(true);
         }
     }
 }
